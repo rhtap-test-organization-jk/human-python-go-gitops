@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: human-python-go
+  janus-idp.io/tekton: human-python-go
+  backstage.io/kubernetes-id: human-python-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: human-python-go
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
